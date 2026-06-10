@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 环境变量
+.env
+
+# 本地数据（聊天记录、数据库、向量存储）
+data/chat_exports/*
+data/profiles/*
+data/chroma_db/*
+!data/chat_exports/.gitkeep
+!data/profiles/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 日志
+logs/
+*.log
+
+# 配置文件（不含示例）
+configs/*.local.toml
