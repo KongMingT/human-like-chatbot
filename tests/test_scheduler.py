@@ -58,10 +58,18 @@ class TestBehaviorScheduler:
         result = scheduler.is_active_hours()
         assert isinstance(result, bool)
 
-    def test_get_inactive_message(self, scheduler):
-        msg = scheduler.get_inactive_message()
+    def test_get_inactive_message_winding(self, scheduler):
+        """准备入睡时应返回告别消息。"""
+        from src.config import SleepState
+        msg = scheduler.get_inactive_message(SleepState.WINDING_DOWN)
         assert isinstance(msg, str)
         assert len(msg) > 5
+
+    def test_get_inactive_message_asleep(self, scheduler):
+        """睡着后不应返回消息。"""
+        from src.config import SleepState
+        msg = scheduler.get_inactive_message(SleepState.ASLEEP_LIGHT)
+        assert msg == ""
 
     @pytest.mark.asyncio
     async def test_split_and_send_short(self, scheduler):

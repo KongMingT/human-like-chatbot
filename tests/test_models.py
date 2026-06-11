@@ -128,7 +128,7 @@ class TestConfigSystem:
         cfg = load_config(cfg_path)
         assert cfg.personality.traits.openness == 0.8
         assert cfg.personality.traits.humor == 0.85
-        assert cfg.personality.language.emojis_enabled is True
+        assert cfg.personality.language.emojis_enabled is False
 
     def test_scheduler_config(self):
         cfg_path = Path(__file__).parent.parent / "configs" / "default.toml"

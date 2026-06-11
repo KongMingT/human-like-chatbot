@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import os
+from enum import Enum
 from pathlib import Path
 from typing import Any
 
@@ -83,6 +84,15 @@ class PersonalityConfig(BaseModel):
     language: LanguageConfig = LanguageConfig()
 
 
+class SleepState(str, Enum):
+    """睡眠状态枚举。"""
+    AWAKE = "awake"
+    WINDING_DOWN = "winding_down"  # 准备入睡
+    ASLEEP_LIGHT = "asleep_light"  # 浅睡
+    ASLEEP_DEEP = "asleep_deep"    # 深睡
+    WAKING_UP = "waking_up"        # 刚醒
+
+
 class ScheduleConfig(BaseModel):
     """作息时间配置。"""
 
@@ -91,6 +101,26 @@ class ScheduleConfig(BaseModel):
     response_rate_active: float = 1.0
     response_rate_inactive: float = 0.3
     response_delay_inactive: int = 300
+
+    # 睡眠阶段时间划分
+    wind_down_start: int = 22        # 开始犯困
+    light_sleep_start: int = 23      # 浅睡
+    deep_sleep_start: int = 0        # 深睡（凌晨0点）
+    deep_sleep_end: int = 6          # 深睡结束
+    waking_up_end: int = 8           # 完全清醒
+
+    # 各睡眠阶段的行为参数
+    response_rate_winding: float = 0.5    # 准备入睡时回复概率
+    response_rate_light: float = 0.2      # 浅睡时回复概率
+    response_rate_deep: float = 0.0       # 深睡时不回复
+    response_rate_waking: float = 0.6     # 刚醒时回复概率
+
+    typing_speed_mult_winding: float = 1.5   # 准备入睡时打字慢 1.5倍
+    typing_speed_mult_light: float = 2.5     # 浅睡时打字极慢
+    typing_speed_mult_waking: float = 1.3    # 刚醒时打字稍慢
+
+    # 周末特殊作息偏移（小时）
+    weekend_offset: int = 1                  # 周末晚起1小时
 
 
 class SchedulerConfig(BaseModel):

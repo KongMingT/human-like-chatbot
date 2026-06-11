@@ -153,9 +153,21 @@ class QQBot(BaseBot):
         user_id = str(data.get("user_id", ""))
         group_id = str(data.get("group_id", "")) if data.get("group_id") else None
 
-        # 提取纯文本
+        # 提取纯文本和媒体
         raw_message = data.get("message", "")
         content = self._extract_text_from_segments(raw_message)
+
+        # 提取图片信息
+        images = []
+        if isinstance(raw_message, list):
+            for seg in raw_message:
+                if seg.get("type") == "image":
+                    img_data = seg.get("data", {})
+                    images.append({
+                        "url": img_data.get("url", ""),
+                        "file": img_data.get("file", ""),
+                        "summary": img_data.get("summary", "[图片]"),
+                    })
 
         # 判断消息类型
         msg_type = MessageType.GROUP if message_type == "group" else MessageType.PRIVATE
@@ -178,6 +190,8 @@ class QQBot(BaseBot):
             content=content,
             raw=data,
             is_mention=is_mention,
+            has_media=len(images) > 0,
+            images=images,
         )
 
     def _extract_text_from_segments(self, message: Any) -> str:
@@ -229,13 +243,32 @@ class QQBot(BaseBot):
             return None
 
     async def send_message(self, message: Message) -> bool:
-        """发送消息到 QQ。"""
+        """发送消息到 QQ。
+
+        支持纯文本和图文混合消息。
+        message.content 为文本内容。
+        message.media_path 如有值，则作为图片一并发送。
+        """
         if not self._ws:
             return False
 
         try:
+            # 构建消息段
+            segments: list[dict] = [{
+                "type": "text",
+                "data": {"text": message.content or ""},
+            }]
+
+            # 如果附带图片，添加图片段
+            media_path = getattr(message, "media_path", None) or getattr(message, "media_url", None)
+            if media_path:
+                segments.append({
+                    "type": "image",
+                    "data": {"file": media_path},
+                })
+
             params: dict[str, Any] = {
-                "message": message.content,
+                "message": segments,
             }
 
             if message.type == MessageType.PRIVATE:

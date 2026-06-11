@@ -52,7 +52,18 @@ cp .env.example .env
 ### 运行
 
 ```bash
+当前本地运行在虚拟环境：.\.venv\Scripts\Activate.ps1
+
 python -m src.main
+
+仅启动 Web 界面（不启动机器人）
+.venv\Scripts\python.exe -m src.main --web-only
+
+同时启动机器人和 Web 界面
+.venv\Scripts\python.exe -m src.main --web
+
+指定端口
+.venv\Scripts\python.exe -m src.main --web --web-port 9090
 ```
 
 ## 项目结构

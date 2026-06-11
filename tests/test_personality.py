@@ -57,9 +57,13 @@ class TestPersonalityEngine:
         assert default_engine._mood.state.value in ["sad", "neutral"]
 
     def test_mood_intensity_decay(self, default_engine):
+        # 模拟时间流逝（设置 updated_at 为 2 小时前）
+        from datetime import timedelta
+        default_engine._mood.updated_at -= timedelta(hours=2)
         default_engine._mood.intensity = 0.9
         default_engine.update_mood_from_content("好的")
-        assert default_engine._mood.intensity < 0.9
+        # 衰减 2h * 0.1 = 20%，0.9 * 0.8 = 0.72
+        assert default_engine._mood.intensity < 0.8
 
     def test_apply_to_prompt(self, default_engine):
         ctx = ConversationContext(

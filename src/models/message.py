@@ -39,6 +39,12 @@ class Message(BaseModel):
     raw: dict[str, Any] = Field(default_factory=dict, description="原始平台消息数据")
     timestamp: datetime = Field(default_factory=datetime.now, description="消息时间")
     is_mention: bool = Field(default=False, description="是否提到了机器人")
+    # 媒体相关
+    has_media: bool = Field(default=False, description="是否包含媒体内容")
+    images: list[dict] = Field(default_factory=list, description="消息中的图片 [{url, file, summary}]")
+    # 发送时附带的媒体
+    media_path: str | None = Field(default=None, description="发送时附带的媒体文件路径")
+    media_url: str | None = Field(default=None, description="发送时附带的媒体 URL")
 
 
 class ConversationContext(BaseModel):

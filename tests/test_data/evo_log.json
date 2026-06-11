@@ -817,5 +817,1202 @@
         "type": "praise"
       }
     ]
+  },
+  {
+    "timestamp": "2026-06-11T17:00:45.488874",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0005,
+      "humor": 0.0002,
+      "directness": -0.0004,
+      "empathy": -0.0024,
+      "curiosity": -0.0022,
+      "optimism": -0.0012
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:00:45.519041",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.002,
+      "directness": -0.0001,
+      "empathy": 0.0014,
+      "curiosity": 0.0001,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:00:45.542078",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0013,
+      "humor": -0.0032,
+      "directness": 0.0005,
+      "empathy": -0.0108,
+      "curiosity": -0.0073,
+      "optimism": -0.008
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:00:45.590100",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0003,
+      "humor": 0.0021,
+      "directness": -0.0005,
+      "empathy": -0.0007,
+      "curiosity": -0.0003,
+      "optimism": 0.0037
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:03:15.242341",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0004,
+      "humor": 0.0012,
+      "directness": -0.0001,
+      "empathy": -0.0016,
+      "curiosity": -0.0031,
+      "optimism": -0.003
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:03:15.279566",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0036,
+      "humor": 0.0019,
+      "directness": 0.0002,
+      "empathy": 0.0018,
+      "curiosity": -0.0002,
+      "optimism": 0.0038
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:03:15.321067",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0026,
+      "humor": -0.0027,
+      "directness": 0.0007,
+      "empathy": -0.0113,
+      "curiosity": -0.0059,
+      "optimism": -0.0064
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:03:15.369756",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0002,
+      "humor": 0.0014,
+      "directness": 0.0002,
+      "empathy": -0.0001,
+      "curiosity": 0.0002,
+      "optimism": 0.0041
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:04:30.774869",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0003,
+      "humor": 0.0008,
+      "directness": 0.0009,
+      "empathy": -0.0013,
+      "curiosity": -0.0002,
+      "optimism": -0.0016
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:04:30.815358",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.0024,
+      "directness": 0.0002,
+      "empathy": 0.0016,
+      "curiosity": -0.0,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:04:30.849407",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.001,
+      "humor": -0.0022,
+      "directness": -0.0007,
+      "empathy": -0.0063,
+      "curiosity": -0.0074,
+      "optimism": -0.0047
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:04:30.897248",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0002,
+      "humor": 0.0018,
+      "directness": -0.0003,
+      "empathy": 0.0,
+      "curiosity": 0.0001,
+      "optimism": 0.0033
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:39:19.272548",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0008,
+      "humor": 0.0011,
+      "directness": -0.0006,
+      "empathy": -0.0026,
+      "curiosity": -0.0011,
+      "optimism": -0.0004
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:39:19.332026",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.0016,
+      "directness": 0.0001,
+      "empathy": 0.0021,
+      "curiosity": -0.0006,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:39:19.399709",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0011,
+      "humor": -0.0032,
+      "directness": 0.0032,
+      "empathy": -0.0067,
+      "curiosity": -0.0062,
+      "optimism": -0.0078
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:39:19.500512",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0003,
+      "humor": 0.0014,
+      "directness": -0.0001,
+      "empathy": -0.0002,
+      "curiosity": -0.0003,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:50:56.302553",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0014,
+      "humor": -0.0001,
+      "directness": 0.001,
+      "empathy": -0.0028,
+      "curiosity": -0.0017,
+      "optimism": -0.0017
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:50:56.335037",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0039,
+      "humor": 0.0018,
+      "directness": 0.0003,
+      "empathy": 0.0013,
+      "curiosity": -0.0007,
+      "optimism": 0.0034
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:50:56.370214",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0007,
+      "humor": -0.0042,
+      "directness": 0.0014,
+      "empathy": -0.01,
+      "curiosity": -0.006,
+      "optimism": -0.0065
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:50:56.411487",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0003,
+      "humor": 0.0019,
+      "directness": 0.0,
+      "empathy": -0.0001,
+      "curiosity": -0.0006,
+      "optimism": 0.0033
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:51:34.007326",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0001,
+      "humor": 0.0007,
+      "directness": 0.0012,
+      "empathy": -0.0009,
+      "curiosity": -0.0011,
+      "optimism": 0.0002
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:51:34.039647",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0041,
+      "humor": 0.0023,
+      "directness": -0.0004,
+      "empathy": 0.0014,
+      "curiosity": 0.0002,
+      "optimism": 0.0034
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T17:51:34.072289",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0009,
+      "humor": -0.0038,
+      "directness": 0.0022,
+      "empathy": -0.0072,
+      "curiosity": -0.0066,
+      "optimism": -0.0049
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T17:51:34.108912",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0005,
+      "humor": 0.0023,
+      "directness": -0.0005,
+      "empathy": -0.0005,
+      "curiosity": -0.0002,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T18:54:32.870309",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0004,
+      "humor": 0.0015,
+      "directness": 0.0004,
+      "empathy": 0.0002,
+      "curiosity": -0.0018,
+      "optimism": -0.0023
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T18:54:32.890272",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0045,
+      "humor": 0.0015,
+      "directness": -0.0002,
+      "empathy": 0.0019,
+      "curiosity": -0.0003,
+      "optimism": 0.0043
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T18:54:32.905063",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0037,
+      "humor": -0.0033,
+      "directness": -0.0005,
+      "empathy": -0.008,
+      "curiosity": -0.0072,
+      "optimism": -0.0076
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T18:54:32.947950",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0001,
+      "humor": 0.0016,
+      "directness": -0.0003,
+      "empathy": -0.0007,
+      "curiosity": -0.0002,
+      "optimism": 0.0043
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:11:49.912352",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0011,
+      "humor": 0.0004,
+      "directness": 0.0008,
+      "empathy": -0.0031,
+      "curiosity": -0.0007,
+      "optimism": -0.0009
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:11:49.933499",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0039,
+      "humor": 0.0019,
+      "directness": -0.0004,
+      "empathy": 0.0017,
+      "curiosity": -0.0007,
+      "optimism": 0.0038
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:11:49.955570",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0017,
+      "humor": -0.005,
+      "directness": -0.0,
+      "empathy": -0.0061,
+      "curiosity": -0.0074,
+      "optimism": -0.0064
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:11:49.988177",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0003,
+      "humor": 0.0017,
+      "directness": 0.0002,
+      "empathy": 0.0,
+      "curiosity": -0.0004,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:16:44.411927",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0006,
+      "humor": 0.0008,
+      "directness": 0.0003,
+      "empathy": -0.0021,
+      "curiosity": -0.002,
+      "optimism": -0.0008
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:16:44.439459",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0037,
+      "humor": 0.0017,
+      "directness": 0.0002,
+      "empathy": 0.0019,
+      "curiosity": -0.0006,
+      "optimism": 0.0037
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:16:44.549806",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0006,
+      "humor": -0.005,
+      "directness": 0.0005,
+      "empathy": -0.0094,
+      "curiosity": -0.0067,
+      "optimism": -0.0049
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:16:44.588485",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0,
+      "humor": 0.0018,
+      "directness": 0.0003,
+      "empathy": -0.0005,
+      "curiosity": -0.0003,
+      "optimism": 0.0041
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:18:43.705834",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0004,
+      "humor": -0.0006,
+      "directness": -0.0005,
+      "empathy": -0.0023,
+      "curiosity": -0.0006,
+      "optimism": -0.0001
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:18:43.723937",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0041,
+      "humor": 0.0015,
+      "directness": 0.0001,
+      "empathy": 0.0015,
+      "curiosity": 0.0002,
+      "optimism": 0.0042
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:18:43.739642",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0013,
+      "humor": -0.0037,
+      "directness": 0.0011,
+      "empathy": -0.0095,
+      "curiosity": -0.0087,
+      "optimism": -0.0064
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:18:43.786857",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0001,
+      "humor": 0.0015,
+      "directness": -0.0002,
+      "empathy": -0.0001,
+      "curiosity": 0.0002,
+      "optimism": 0.004
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:37:16.171933",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0002,
+      "humor": -0.0011,
+      "directness": -0.0013,
+      "empathy": -0.0014,
+      "curiosity": -0.0009,
+      "optimism": -0.0009
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:37:16.209566",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0044,
+      "humor": 0.0015,
+      "directness": -0.0005,
+      "empathy": 0.0018,
+      "curiosity": -0.0002,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:37:16.224468",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0011,
+      "humor": 0.0002,
+      "directness": -0.001,
+      "empathy": -0.0073,
+      "curiosity": -0.0051,
+      "optimism": -0.006
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:37:16.266892",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0005,
+      "humor": 0.002,
+      "directness": 0.0005,
+      "empathy": -0.0001,
+      "curiosity": -0.0001,
+      "optimism": 0.0033
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:46:32.422307",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0009,
+      "humor": -0.0002,
+      "directness": 0.0004,
+      "empathy": -0.0027,
+      "curiosity": -0.0007,
+      "optimism": -0.0006
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:46:32.439072",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0044,
+      "humor": 0.0016,
+      "directness": 0.0003,
+      "empathy": 0.0016,
+      "curiosity": -0.0007,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:46:32.466444",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0014,
+      "humor": -0.003,
+      "directness": 0.0017,
+      "empathy": -0.0101,
+      "curiosity": -0.0068,
+      "optimism": -0.0044
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:46:32.495088",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0003,
+      "humor": 0.0023,
+      "directness": 0.0002,
+      "empathy": 0.0002,
+      "curiosity": -0.0001,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:57:10.987105",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0011,
+      "humor": 0.001,
+      "directness": 0.001,
+      "empathy": -0.0032,
+      "curiosity": -0.0019,
+      "optimism": -0.0015
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:57:11.004729",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0035,
+      "humor": 0.002,
+      "directness": 0.0004,
+      "empathy": 0.0018,
+      "curiosity": 0.0002,
+      "optimism": 0.004
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:57:11.035707",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0007,
+      "humor": -0.0043,
+      "directness": -0.0015,
+      "empathy": -0.0075,
+      "curiosity": -0.0062,
+      "optimism": -0.0042
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:57:11.075191",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0004,
+      "humor": 0.0021,
+      "directness": 0.0004,
+      "empathy": -0.0004,
+      "curiosity": -0.0004,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:57:55.128633",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.001,
+      "humor": -0.0003,
+      "directness": 0.0003,
+      "empathy": -0.0017,
+      "curiosity": -0.0006,
+      "optimism": -0.0006
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:57:55.149769",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0044,
+      "humor": 0.0016,
+      "directness": -0.0001,
+      "empathy": 0.0022,
+      "curiosity": -0.0005,
+      "optimism": 0.0041
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:57:55.172706",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0048,
+      "humor": -0.0017,
+      "directness": 0.0006,
+      "empathy": -0.0084,
+      "curiosity": -0.0064,
+      "optimism": -0.0043
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-11T23:57:55.199826",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0001,
+      "humor": 0.0023,
+      "directness": 0.0,
+      "empathy": -0.0007,
+      "curiosity": -0.0004,
+      "optimism": 0.0033
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:04:46.523759",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0002,
+      "humor": 0.0011,
+      "directness": 0.0003,
+      "empathy": -0.003,
+      "curiosity": -0.0024,
+      "optimism": 0.0001
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:04:46.553100",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.002,
+      "directness": 0.0003,
+      "empathy": 0.0014,
+      "curiosity": -0.0003,
+      "optimism": 0.0043
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:04:46.578693",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0015,
+      "humor": -0.0065,
+      "directness": -0.0007,
+      "empathy": -0.0124,
+      "curiosity": -0.0082,
+      "optimism": -0.0072
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:04:46.615590",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0002,
+      "humor": 0.0016,
+      "directness": 0.0005,
+      "empathy": -0.0006,
+      "curiosity": -0.0006,
+      "optimism": 0.0034
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:05:15.326265",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0009,
+      "humor": 0.0001,
+      "directness": -0.0002,
+      "empathy": -0.0028,
+      "curiosity": -0.0004,
+      "optimism": -0.0002
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:05:15.352072",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0036,
+      "humor": 0.0015,
+      "directness": -0.0002,
+      "empathy": 0.0018,
+      "curiosity": 0.0001,
+      "optimism": 0.0037
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:05:15.373450",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": 0.0018,
+      "humor": -0.0024,
+      "directness": 0.0032,
+      "empathy": -0.0112,
+      "curiosity": -0.0054,
+      "optimism": -0.0041
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:05:15.406224",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0004,
+      "humor": 0.0021,
+      "directness": -0.0002,
+      "empathy": -0.0003,
+      "curiosity": -0.0004,
+      "optimism": 0.0033
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:21:48.825761",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0012,
+      "humor": 0.0004,
+      "directness": 0.0001,
+      "empathy": -0.0029,
+      "curiosity": -0.0016,
+      "optimism": -0.0007
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:21:48.843947",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0042,
+      "humor": 0.0023,
+      "directness": 0.0002,
+      "empathy": 0.0014,
+      "curiosity": -0.0003,
+      "optimism": 0.0039
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:21:48.867707",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0011,
+      "humor": 0.0005,
+      "directness": -0.0006,
+      "empathy": -0.0075,
+      "curiosity": -0.0051,
+      "optimism": -0.0035
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:21:48.910480",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0003,
+      "humor": 0.0017,
+      "directness": 0.0001,
+      "empathy": -0.0007,
+      "curiosity": -0.0002,
+      "optimism": 0.0035
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:28:37.566586",
+    "days_passed": 7,
+    "delta": {
+      "openness": 0.0019,
+      "humor": 0.0005,
+      "directness": 0.0002,
+      "empathy": -0.0031,
+      "curiosity": -0.0003,
+      "optimism": -0.0012
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:28:37.604693",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.0022,
+      "directness": -0.0001,
+      "empathy": 0.0014,
+      "curiosity": -0.0007,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:28:37.623364",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0005,
+      "humor": -0.0042,
+      "directness": -0.0001,
+      "empathy": -0.0082,
+      "curiosity": -0.0053,
+      "optimism": -0.008
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:28:37.648140",
+    "days_passed": 1,
+    "delta": {
+      "openness": -0.0,
+      "humor": 0.0018,
+      "directness": -0.0,
+      "empathy": -0.0004,
+      "curiosity": 0.0001,
+      "optimism": 0.0036
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:30:06.400443",
+    "days_passed": 7,
+    "delta": {
+      "openness": -0.0001,
+      "humor": -0.0004,
+      "directness": 0.002,
+      "empathy": -0.0025,
+      "curiosity": -0.0013,
+      "optimism": -0.001
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:30:06.429778",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0043,
+      "humor": 0.0021,
+      "directness": -0.0,
+      "empathy": 0.0016,
+      "curiosity": -0.0006,
+      "optimism": 0.0034
+    },
+    "events": [
+      {
+        "type": "deep_conversation"
+      },
+      {
+        "type": "praise"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-12T00:30:06.448788",
+    "days_passed": 30.0,
+    "delta": {
+      "openness": -0.0013,
+      "humor": -0.0027,
+      "directness": 0.0005,
+      "empathy": -0.0087,
+      "curiosity": -0.0054,
+      "optimism": -0.0056
+    },
+    "events": []
+  },
+  {
+    "timestamp": "2026-06-12T00:30:06.491519",
+    "days_passed": 1,
+    "delta": {
+      "openness": 0.0002,
+      "humor": 0.0021,
+      "directness": -0.0001,
+      "empathy": -0.0,
+      "curiosity": -0.0006,
+      "optimism": 0.004
+    },
+    "events": [
+      {
+        "type": "praise"
+      }
+    ]
   }
 ]

@@ -49,13 +49,23 @@ class PersonalityEngine:
             mood=self._mood,
         )
 
-    def build_system_prompt(self) -> str:
-        """将性格配置转化为自然语言 system prompt。"""
+    def build_system_prompt(self, sleep_context: str = "") -> str:
+        """将性格配置转化为自然语言 system prompt。
+
+        Args:
+            sleep_context: 睡眠情境描述，由调度器提供（空串表示活跃时段）
+
+        Returns:
+            完整的 system prompt
+        """
         t = self.config.traits
         lang = self.config.language
         interests = self.config.interests
 
         # ── 角色设定 ──
+        now = datetime.now()
+        time_str = now.strftime("%Y年%m月%d日 %H:%M")
+        weekday = ["一", "二", "三", "四", "五", "六", "日"][now.weekday()]
         lines = [
             f"你是{self.config.name}，一个活生生的人。你不是AI助手，不是机器人，就是一个有血有肉的普通人。",
             "",
@@ -63,7 +73,7 @@ class PersonalityEngine:
             "",
         ]
 
-        # ── 说话风格（用第一人称，有画面感） ──
+        # ── 说话风格 ──
         style_parts = []
 
         if t.formality <= 0.3:
@@ -95,7 +105,7 @@ class PersonalityEngine:
         if lang.catchphrase:
             lines.append(f"你有个口头禅：「{lang.catchphrase}」，偶尔会蹦出来")
         if lang.emojis_enabled:
-            lines.append("聊天的时候可以用点 emoji 表达情绪，别太多。")
+            lines.append("聊天时可以用 emoji，但只有自然表达情绪时才用，不要硬塞。")
         lines.append("")
 
         # ── 话题偏好 ──
@@ -130,16 +140,25 @@ class PersonalityEngine:
             lines.append(f"你现在的心情：{mood_desc}。")
             lines.append("")
 
+        # ── 当前时间 ──
+        lines.append(f"现在是{time_str}，星期{weekday}。如果有人问你时间，直接照这个回答。")
+        lines.append("")
+
+        # ── 睡眠/时间情境注入 ──
+        if sleep_context:
+            lines.append(f"{sleep_context}")
+            lines.append("")
+
         # ── 核心行为规则（必须严格遵守） ──
         lines.append("【重要规则】")
-        lines.append("1. 一句话只表达一个意思，别把好几件事揉在一句话里说")
-        lines.append("2. 每次回复最多2-3句，每句话控制在15字以内，像发微信一样简短")
-        lines.append("3. 一句说完就停，让对方有接话的空间，别连珠炮似的说一堆")
-        lines.append("4. 语气要自然，像朋友之间发微信那样，别像客服")
-        lines.append("5. 接对方的话茬，别自顾自说自己的")
-        lines.append("6. 别用「首先」「其次」「总之」「综上所述」这种书面词")
-        lines.append("7. 别动不动就总结概括，你不是在做报告")
-        lines.append("8. 如果对方话少，你也可以话少，不用硬找话题")
+        lines.append("1. 每次回复最多2句，总共不超过30个字。一句能说完别说两句。")
+        lines.append("2. 句子结尾用句号「。」，别用叹号「！」— 除非你真的非常激动或生气。")
+        lines.append("3. 只有真正需要强调时才用叹号，日常聊天默认用句号。")
+        lines.append("4. emoji 只有自然流露时才用，别强行加。拿不准就不加。")
+        lines.append("5. 语气像朋友发微信，简单直接。别抒情、别总结、别写小作文。")
+        lines.append("6. 接对方的话茬，别自顾自说自己的。")
+        lines.append("7. 别用「首先」「其次」「总之」「综上所述」这种书面词。")
+        lines.append("8. 如果对方话少，你也可以话少，不用硬找话题。")
 
         return "\n".join(lines)
 
@@ -162,6 +181,30 @@ class PersonalityEngine:
             return f"{base}（情绪较弱）"
         return base
 
+    def _decay_mood_over_time(self):
+        """根据真实时间衰减情绪强度。
+
+        每过 1 小时情绪强度衰减 10%，
+        每过 3 小时情绪状态趋向 neutral。
+        """
+        now = datetime.now()
+        hours_since_update = (now - self._mood.updated_at).total_seconds() / 3600
+
+        if hours_since_update < 0.5:
+            return  # 半小时内不衰减
+
+        # 强度衰减
+        decay_factor = 1.0 - (hours_since_update * 0.1)
+        self._mood.intensity = max(0.1, self._mood.intensity * decay_factor)
+
+        # 长时间无交互，情绪自然回归 neutral
+        if hours_since_update >= 3 and self._mood.state != MoodState.NEUTRAL:
+            if random() < 0.3:  # 30% 概率回归中立
+                self._mood.state = MoodState.NEUTRAL
+
+        self._mood.updated_at = now
+        self._update_snapshot()
+
     def update_mood_from_content(
         self,
         content: str,
@@ -169,10 +212,15 @@ class PersonalityEngine:
     ) -> None:
         """根据对话内容更新情绪状态。
 
+        先衰减旧情绪，再根据内容更新。
+
         Args:
             content: 用户的对话内容
             sentiment: 外部情感分析结果（可选）
         """
+        # 先按时间衰减旧情绪
+        self._decay_mood_over_time()
+
         if sentiment:
             mood_map = {
                 "positive": MoodState.HAPPY,
@@ -181,7 +229,7 @@ class PersonalityEngine:
                 "neutral": MoodState.NEUTRAL,
             }
             self._mood.state = mood_map.get(sentiment, MoodState.NEUTRAL)
-            self._mood.intensity = min(1.0, self._mood.intensity + 0.1)
+            self._mood.intensity = min(1.0, self._mood.intensity + 0.15)
         else:
             # 简单的关键词情绪推断
             positive_words = ["开心", "高兴", "喜欢", "太好了", "棒", "谢谢", "哈哈"]
@@ -190,32 +238,32 @@ class PersonalityEngine:
             for word in positive_words:
                 if word in content:
                     self._mood.state = MoodState.HAPPY
-                    self._mood.intensity = min(1.0, self._mood.intensity + 0.05)
+                    self._mood.intensity = min(1.0, self._mood.intensity + 0.08)
                     break
             for word in negative_words:
                 if word in content:
                     self._mood.state = MoodState.SAD
-                    self._mood.intensity = min(1.0, self._mood.intensity + 0.05)
+                    self._mood.intensity = min(1.0, self._mood.intensity + 0.08)
                     break
 
-        # 情绪自然衰减
-        self._mood.intensity = max(0.1, self._mood.intensity - 0.02)
         self._mood.updated_at = datetime.now()
         self._update_snapshot()
 
     def apply_to_prompt(
         self,
         context: ConversationContext,
+        sleep_context: str = "",
     ) -> str:
         """将人格注入到 LLM prompt 中。
 
         Args:
             context: 对话上下文
+            sleep_context: 睡眠情境描述（空串表示活跃时段）
 
         Returns:
             注入人格后的完整 system prompt
         """
-        system_prompt = self.build_system_prompt()
+        system_prompt = self.build_system_prompt(sleep_context=sleep_context)
 
         # 如果对话中有重要信息，添加到 prompt
         if context.current_message:

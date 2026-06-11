@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>小夜 · 人格配置</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --card: #1a1a2e;
+      --accent: #7c3aed;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #2d2d4a
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 40px 24px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    h1 {
+      font-size: 22px;
+      color: var(--accent);
+      margin-bottom: 4px
+    }
+
+    .sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px
+    }
+
+    .card h2 {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .f {
+      margin-bottom: 16px
+    }
+
+    .f:last-child {
+      margin-bottom: 0
+    }
+
+    .f label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px
+    }
+
+    .f .h {
+      font-size: 11px;
+      color: var(--muted);
+      opacity: .6;
+      margin-top: 2px
+    }
+
+    input[type=text],
+    select {
+      width: 100%;
+      background: #0a0a16;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 14px
+    }
+
+    input[type=text]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--accent)
+    }
+
+    .sr {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .sr input[type=range] {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      outline: none
+    }
+
+    .sr input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer
+    }
+
+    .sr .v {
+      min-width: 32px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .if {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 300px;
+      background: #0a0a16;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1.6;
+      resize: vertical
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent)
+    }
+
+    .ac {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 20px
+    }
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: .2s
+    }
+
+    button:hover {
+      opacity: .85
+    }
+
+    button:disabled {
+      opacity: .4;
+      cursor: not-allowed
+    }
+
+    button.sc {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted)
+    }
+
+    button.sc:hover {
+      border-color: var(--accent);
+      color: var(--text)
+    }
+
+    .drop {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .drop:hover,
+    .drop.dragover {
+      border-color: var(--accent);
+      background: rgba(124, 58, 237, 0.05)
+    }
+
+    .drop p {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .fl {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .fl>div {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px
+    }
+
+    .fl .m {
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0)
+    }
+
+    .tost {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 20px;
+      display: none;
+      font-size: 14px;
+      z-index: 100
+    }
+
+    .tost.s {
+      display: block;
+      animation: fade .3s
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .tabs {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 24px
+    }
+
+    .tabs button {
+      background: transparent;
+      color: var(--muted);
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      font-size: 14px;
+      border-bottom: 2px solid transparent
+    }
+
+    .tabs button.a {
+      color: var(--accent);
+      border-bottom-color: var(--accent)
+    }
+
+    .tc {
+      display: none
+    }
+
+    .tc.a {
+      display: block
+    }
+  </style>
+</head>
+
+<body>
+  <h1>&#10022; 小夜 · 人格配置</h1>
+  <p class="sub">在线编辑性格参数，保存后重启机器人生效</p>
+  <div class="tabs">
+    <button class="a" onclick="sw('form')">&#127912; 可视化编辑</button>
+    <button onclick="sw('raw')">&#128196; 源码编辑</button>
+    <button onclick="sw('import')">&#128229; 数据导入</button>
+  </div>
+  <div class="tc a" id="tab-form">
+    <div id="cf"></div>
+    <div class="ac"><button onclick="save()">&#128190; 保存配置</button><button class="sc" onclick="load()">&#8635;
+        重置</button><span id="st" style="font-size:13px;color:var(--muted)"></span></div>
+  </div>
+  <div class="tc" id="tab-raw"><textarea id="re"></textarea>
+    <div class="ac"><button onclick="saveRaw()">&#128190; 保存配置</button><button class="sc" onclick="loadRaw()">&#8635;
+        重新加载</button></div>
+  </div>
+  <div class="tc" id="tab-import">
+    <div class="card">
+      <h2>上传聊天记录</h2>
+      <div class="drop" id="dropZone">
+        <p style="font-size:32px;margin-bottom:8px">&#128229;</p>
+        <p>拖拽文件到此处，或点击选择文件</p>
+        <p class="h" style="margin-top:6px">支持 JSON / CSV / TXT 格式</p>
+        <input type="file" id="fileInput" accept=".json,.csv,.txt" style="display:none"
+          onchange="uploadFile(this.files[0])">
+      </div>
+    </div>
+    <div class="card">
+      <h2>已导入的聊天记录</h2>
+      <div id="importedFiles">
+        <p style="color:var(--muted);font-size:14px">加载中…</p>
+      </div>
+    </div>
+    <div id="importResult" class="card" style="display:none"></div>
+  </div>
+  <div class="tost" id="ts"></div>
+  <script>
+    function sw(n) { document.querySelectorAll('.tc').forEach(e => e.classList.remove('a')); document.querySelectorAll('.tabs button').forEach(e => e.classList.remove('a')); document.getElementById('tab-' + n).classList.add('a'); document.querySelector(`.tabs button[onclick*='${n}']`).classList.add('a'); if (n === 'form') load(); if (n === 'raw') loadRaw(); if (n === 'import') loadImportedFiles() }
+    function ud(i, d) { document.getElementById(d).textContent = document.getElementById(i).value }
+    function toast(m) { const t = document.getElementById('ts'); t.textContent = m; t.classList.add('s'); setTimeout(() => t.classList.remove('s'), 2500) }
+    function esc(s) { return s ? s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;') : '' }
+    function build(p) {
+      const T = p.traits || {}, M = p.mood || {}, I = p.interests || {}, L = p.language || {};
+      const sl = (i, l, h, v) => '<div class="f"><label>' + l + ' <span class="h">' + h + '</span></label><div class="sr"><input type="range" id="' + i + '" min="0" max="1" step="0.05" value="' + v + '" oninput="ud(\'' + i + '\',\'' + i + '_v\')"><span class="v" id="' + i + '_v">' + v + '</span></div></div>';
+      const sel = (id, val, ops) => '<select id="' + id + '">' + ops.map(s => '<option value="' + s + '"' + (val === s ? ' selected' : '') + '>' + s + '</option>').join('') + '</select>';
+      return '<div class="card"><h2>基础信息</h2><div class="if"><div class="f"><label>人格名称</label><input type="text" id="pn" value="' + esc(p.name || '') + '"></div><div class="f"><label>初始情绪</label>' + sel('pm', M.initial || 'neutral', ['neutral', 'happy', 'sad', 'angry', 'excited', 'tired', 'calm', 'anxious']) + '</div></div><div class="f"><label>性格描述</label><input type="text" id="pd" value="' + esc(p.description || '') + '"><div class="h">一句话描述角色的特点</div></div></div><div class="card"><h2>性格维度</h2>' + sl('to', '开放度', '对新话题的接受程度', T.openness || 0.7) + sl('th', '幽默感', '开玩笑的倾向', T.humor || 0.6) + sl('td', '直率程度', '说话直接vs委婉', T.directness || 0.5) + sl('te', '共情能力', '理解他人情绪', T.empathy || 0.8) + sl('tc', '好奇心', '主动提问的倾向', T.curiosity || 0.7) + sl('tf', '正式程度', '语气正式vs随意', T.formality || 0.3) + sl('top', '乐观程度', '积极vs消极', T.optimism || 0.7) + '</div><div class="card"><h2>话题偏好</h2>' + sl('i1', '科技数码', '', I.technology || 0.7) + sl('i2', '娱乐八卦', '', I.entertainment || 0.6) + sl('i3', '日常生活', '', I.daily_life || 0.7) + sl('i4', '科学', '', I.science || 0.5) + sl('i5', '哲学', '', I.philosophy || 0.4) + '</div><div class="card"><h2>语言风格</h2><div class="if"><div class="f"><label>风格</label>' + sel('ls', L.style || 'casual', ['casual', 'formal', 'poetic', 'witty']) + '</div><div class="f"><label>口头禅</label><input type="text" id="lc" value="' + esc(L.catchphrase || '') + '" placeholder="留空则不设置"></div></div><div class="f" style="margin-top:8px"><label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="le"' + (L.emojis_enabled !== false ? ' checked' : '') + '> 允许使用 emoji</label></div></div>';
+    }
+    async function load() { try { const r = await fetch('/api/config'); const d = await r.json(); document.getElementById('cf').innerHTML = build(d.parsed?.personality || {}) } catch (e) { toast('加载失败') } }
+    async function save() {
+      const g = i => document.getElementById(i)?.value ?? '', n = i => parseFloat(document.getElementById(i)?.value ?? 0), c = i => document.getElementById(i)?.checked ?? false;
+      const sec = (name, body) => '\n[' + name + ']\n' + body;
+      const kv = (k, v) => k + ' = ' + v + '\n';
+      const personality = 'name = "' + g('pn') + '"\ndescription = "' + g('pd') + '"\n' +
+        sec('personality.traits', 'openness = ' + n('to') + '\nhumor = ' + n('th') + '\ndirectness = ' + n('td') + '\nempathy = ' + n('te') + '\ncuriosity = ' + n('tc') + '\nformality = ' + n('tf') + '\noptimism = ' + n('top')) +
+        sec('personality.mood', 'initial = "' + g('pm') + '"\nvolatility = 0.3') +
+        sec('personality.interests', 'technology = ' + n('i1') + '\nentertainment = ' + n('i2') + '\ndaily_life = ' + n('i3') + '\nscience = ' + n('i4') + '\nphilosophy = ' + n('i5')) +
+        sec('personality.language', 'style = "' + g('ls') + '"\ncatchphrase = "' + g('lc') + '"\nemojis_enabled = ' + (c('le') ? 'true' : 'false') + '\ntypo_frequency = 0.05');
+
+      // 加载现有配置，替换 personality 段，保留其他段
+      document.getElementById('st').textContent = '保存中…';
+      try {
+        const r = await fetch('/api/config'); const cur = await r.json();
+        const raw = cur.raw || '';
+        // 用正则替换 [personality] 及其后的所有内容直到下一个顶层 section 或文件结尾
+        const merged = raw.replace(/(\n\[personality\].*?)(?=\n\[|\n*$)/s, '\n' + personality);
+        await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: merged }) });
+        toast('已保存');
+      } catch (e) { toast('保存失败') }
+      document.getElementById('st').textContent = '';
+    }
+    async function loadRaw() { try { const r = await fetch('/api/config'); const d = await r.json(); document.getElementById('re').value = d.raw || '' } catch (e) { toast('加载失败') } }
+    async function saveRaw() { const b = document.querySelector('#tab-raw button'); b.disabled = true; b.textContent = '保存中…'; try { await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: document.getElementById('re').value }) }); toast('已保存') } catch (e) { toast('保存失败') }; b.disabled = false; b.textContent = '💾 保存配置' }
+
+    // ── 数据导入 ──
+    const dz = document.getElementById('dropZone');
+    const fi = document.getElementById('fileInput');
+    dz.addEventListener('click', () => fi.click());
+    dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('dragover') });
+    dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+    dz.addEventListener('drop', e => { e.preventDefault(); dz.classList.remove('dragover'); if (e.dataTransfer.files.length) uploadFile(e.dataTransfer.files[0]) });
+
+    async function uploadFile(file) {
+      if (!file) return;
+      if (!file.name.match(/\.(json|csv|txt)$/i)) { toast('仅支持 JSON / CSV / TXT 格式'); return }
+      toast('上传中…');
+      const fd = new FormData(); fd.append('file', file);
+      try {
+        const r = await fetch('/api/chat_import', { method: 'POST', body: fd });
+        const d = await r.json();
+        if (d.success) {
+          document.getElementById('importResult').style.display = 'block';
+          const s = d.summary || {};
+          document.getElementById('importResult').innerHTML = '<h2>导入结果</h2><p style="margin-bottom:8px;color:var(--green);font-size:15px">&#10004; ' + d.message + '</p><div class="fl"><div><span>文件</span><span>' + d.filename + '</span></div><div><span>消息数</span><span>' + (s.total || 0) + '</span></div><div><span>发言者</span><span>' + Object.keys(s.senders || {}).join(', ') + '</span></div><div><span>平均长度</span><span>' + (s.avg_length || 0) + ' 字</span></div><div><span>时间范围</span><span>' + (s.date_range || '未知') + '</span></div></div>';
+          loadImportedFiles();
+        } else { toast('导入失败') }
+      } catch (e) { toast('导入失败') }
+    }
+    async function loadImportedFiles() {
+      try {
+        const r = await fetch('/api/chat_exports'); const d = await r.json();
+        const files = d.files || [];
+        if (files.length === 0) { document.getElementById('importedFiles').innerHTML = '<p style="color:var(--muted);font-size:14px">暂无导入的聊天记录</p>'; return }
+        document.getElementById('importedFiles').innerHTML = '<div class="fl">' + files.map(f =>
+          '<div><span>' + f.name + '</span><span class="m">' + (f.size / 1024).toFixed(1) + 'KB</span></div>'
+        ).join('') + '</div>';
+      } catch (e) { document.getElementById('importedFiles').innerHTML = '<p style="color:var(--muted)">加载失败</p>' }
+    }
+    load();
+  </script>
+</body>
+
+</html>

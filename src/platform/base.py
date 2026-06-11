@@ -8,7 +8,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import AsyncGenerator, Callable
 
-from src.models.message import Message, PlatformEvent
+from src.models.message import Message, MessageType, PlatformEvent
 
 
 class BaseBot(ABC):
@@ -38,6 +38,8 @@ class BaseBot(ABC):
     ) -> bool:
         """发送消息。
 
+        支持私聊和群聊（根据 message.type 和 message.group_id 判断）。
+
         Args:
             message: 要发送的消息对象
 
@@ -45,6 +47,24 @@ class BaseBot(ABC):
             是否发送成功
         """
         ...
+
+    # ── 群聊接口预留 ──────────────────────────────
+
+    async def send_group_message(self, group_id: str, message: Message) -> bool:
+        """发送群消息（默认实现通过 send_message 转发）。"""
+        message.type = MessageType.GROUP
+        message.group_id = group_id
+        return await self.send_message(message)
+
+    async def get_group_members(self, group_id: str) -> list[dict]:
+        """获取群成员列表（各平台自行实现）。"""
+        return []
+
+    async def get_group_info(self, group_id: str) -> dict:
+        """获取群信息（各平台自行实现）。"""
+        return {"id": group_id}
+
+    # ── 消息类型 ──────────────────────────────────
 
     @abstractmethod
     async def listen(self) -> AsyncGenerator[Message, None]:
